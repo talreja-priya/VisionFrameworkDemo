@@ -23,7 +23,9 @@ extension ViewController
             return
         }
         let requestHandler = VNImageRequestHandler(cgImage: cgImage, orientation: image.cgImageOrientation, options: [:])
-        let vnRequests = [vnDetectionRequest,vnFaceDetectionRequest,vnBarCodeDetectionRequest,vnTextDetectionRequest]
+        //Request Array
+        //From now I am just passing text detection request.. You can pass vnDetectionRequest,vnFaceDetectionRequest,vnBarCodeDetectionRequest
+        let vnRequests = [vnTextDetectionRequest]
         DispatchQueue.global(qos: .background).async {
             do{
                 try requestHandler.perform(vnRequests)
