@@ -17,40 +17,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ONP-Mw-nXO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyg-0b-04A">
-                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem systemItem="camera" id="3Ng-0z-G0S">
-                                        <connections>
-                                            <action selector="takePicture" destination="OlJ-ak-EBL" id="TmO-5v-wmL"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qaz-Il-V0N"/>
-                                </items>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-xZ-0yp">
+                                <rect key="frame" x="107" y="74" width="200" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RYR-DK-bYn"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ud5-rP-Iss"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Choose/Take Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="photoButtonClicked:" destination="OlJ-ak-EBL" eventType="touchUpInside" id="ase-kl-zcj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="trailing" secondItem="tyg-0b-04A" secondAttribute="trailing" id="2B1-IS-X8B"/>
-                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="bottom" secondItem="tyg-0b-04A" secondAttribute="bottom" id="4os-CD-3pE"/>
-                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="top" secondItem="ON0-fh-4fx" secondAttribute="top" id="Ng8-fL-nBx"/>
-                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="leading" secondItem="tyg-0b-04A" secondAttribute="leading" id="RPG-uJ-1ip"/>
-                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="leading" secondItem="ON0-fh-4fx" secondAttribute="leading" id="f83-M7-cuc"/>
-                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="centerY" secondItem="ON0-fh-4fx" secondAttribute="centerY" id="h0U-KV-FAn"/>
-                            <constraint firstAttribute="trailing" secondItem="ONP-Mw-nXO" secondAttribute="trailing" id="y9z-qR-8cb"/>
+                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="top" secondItem="nIN-xZ-0yp" secondAttribute="bottom" constant="40" id="6pB-Jg-Sav"/>
+                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="leading" secondItem="ZVJ-K8-Vlc" secondAttribute="leading" id="7AH-Pc-4c3"/>
+                            <constraint firstItem="ZVJ-K8-Vlc" firstAttribute="bottom" secondItem="ONP-Mw-nXO" secondAttribute="bottom" id="Fmp-Ck-FUE"/>
+                            <constraint firstItem="nIN-xZ-0yp" firstAttribute="top" secondItem="ZVJ-K8-Vlc" secondAttribute="top" constant="30" id="bHu-5T-cD6"/>
+                            <constraint firstItem="nIN-xZ-0yp" firstAttribute="centerX" secondItem="ON0-fh-4fx" secondAttribute="centerX" id="g8q-4o-Mcw"/>
+                            <constraint firstItem="ONP-Mw-nXO" firstAttribute="trailing" secondItem="ZVJ-K8-Vlc" secondAttribute="trailing" id="mcV-oL-lyt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZVJ-K8-Vlc"/>
                     </view>
                     <connections>
-                        <outlet property="cameraButton" destination="3Ng-0z-G0S" id="EJU-AD-2Ks"/>
                         <outlet property="imageView" destination="ONP-Mw-nXO" id="QNr-9N-xGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exr-q7-SKn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.5" y="138.5"/>
+            <point key="canvasLocation" x="139.13043478260872" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
